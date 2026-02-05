@@ -209,7 +209,3 @@ fun main() {
 ## ***Exercicios 25***
 ```kotlin
 ```
-
-## ***Exercicios 1***
-```kotlin
-```
