@@ -48,31 +48,106 @@ fun main() {
 ## ***Exercicios 5***
 ```kotlin
 fun main(){
-    var altura = readln().toInt()
-    var largura = readln().toInt()
+    var altura = readln().toDouble()
+    var largura = readln().toDouble()
     
     var areaTriangulo = (altura * largura) / 2
+    println("A area do triangulo é $areaTriangulo")
 }
 ```
 
 ## ***Exercicios 6***
 ```kotlin
+import kotlin.math.pow
+fun main() {
+    println("Digite seu peso em kilos")
+    val peso = readln().toDouble()
+    println("Digite sua altura em metros")
+    val altura = readln().toDouble()
+    
+    var imc = peso / altura.pow(2)
+    
+    if(imc < 18.5){
+        println("Abaixo do peso")
+    } else if(imc >= 18.5 && imc < 24.9){
+        println("Peso normal")
+    } else if(imc >= 24.9 && imc < 29.9){
+        println("Sobrepeso")
+    } else {
+        println("Obesidade")
+    }
+    println(imc)
+}
 ```
 
 ## ***Exercicios 7***
 ```kotlin
+fun main(){
+    var idadeEmDias = readln().toInt()
+    
+    if(idadeEmDias > 30){
+    var meses = (idadeEmDias / 30).toInt()
+    var diasRestantes = idadeEmDias % 30
+        if(meses > 12){
+        var anos = (meses / 12).toInt()
+        var mesesRestantes = meses % 12
+            if(anos > 0){
+        println("Você é $anos ano(s) $mesesRestantes mês(es) e $diasRestantes dia(s) de idade")
+        }
+        } else {
+            println("Você é $meses meses e $diasRestantes dia(s) de idade")
+        }
+    } else {
+        println("Você é $idadeEmDias dia(s) de idade")
+    }
+    
+}
 ```
 
 ## ***Exercicios 8***
 ```kotlin
+fun main(){
+    var nota1 = readln().toDouble()
+    var nota2 = readln().toDouble()
+    var nota3 = readln().toDouble()
+    
+    var media = (nota1 + nota2 + nota3) / 3 
+    println("A média é $media")
+}
 ```
 
 ## ***Exercicios 9***
 ```kotlin
+fun main() {
+    val segundos = readln().toInt()
+
+    var horas = segundos / 3600
+    var minutos = (segundos % 3600) / 60
+    var segundosRestantes = segundos % 60
+
+    println("O evento tem duração de $horas hora(s), $minutos minuto(s) e $segundosRestantes segundo(s).")
+}
 ```
 
 ## ***Exercicios 10***
 ```kotlin
+import kotlin.math.pow
+import kotlin.math.sqrt
+
+fun main() {
+    println("Valor x1")
+    var x1 = readln().toDouble()
+    println("Valor x2")
+    var x2 = readln().toDouble()
+    println("Valor y1")
+    var y1 = readln().toDouble()
+    println("Valor y2")
+    var y2 = readln().toDouble()
+    
+    var distancia = sqrt((x2 - x1).pow(2) + (y2 - y1).pow(2)) 
+    
+    println("Distancia é $distancia")
+}
 ```
 
 ## ***Exercicios 11***
